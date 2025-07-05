@@ -283,4 +283,8 @@ impl TransactionBuilder<Ethereum> for TransactionRequest {
     ) -> Result<<Ethereum as Network>::TxEnvelope, TransactionBuilderError<Ethereum>> {
         Ok(wallet.sign_request(self).await?)
     }
+
+    fn take_nonce(&mut self) -> Option<u64> {
+        self.nonce.take()
+    }
 }

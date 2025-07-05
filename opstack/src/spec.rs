@@ -325,4 +325,8 @@ impl TransactionBuilder<OpStack> for OpTransactionRequest {
     ) -> Result<<OpStack as Network>::TxEnvelope, TransactionBuilderError<OpStack>> {
         Ok(wallet.sign_request(self).await?)
     }
+
+    fn take_nonce(&mut self) -> Option<u64> {
+        <TransactionRequest as TransactionBuilder<Ethereum>>::take_nonce(self.as_mut())
+    }
 }
