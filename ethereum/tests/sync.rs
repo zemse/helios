@@ -4,8 +4,10 @@ use alloy::primitives::b256;
 use url::Url;
 
 use helios_consensus_core::consensus_spec::MainnetConsensusSpec;
-use helios_ethereum::config::{networks, Config};
-use helios_ethereum::{consensus::ConsensusClient, database::ConfigDB, rpc::mock_rpc::MockRpc};
+use zemse_helios_ethereum::config::{networks, Config};
+use zemse_helios_ethereum::{
+    consensus::ConsensusClient, database::ConfigDB, rpc::mock_rpc::MockRpc,
+};
 
 async fn setup() -> ConsensusClient<MainnetConsensusSpec, MockRpc, ConfigDB> {
     let base_config = networks::mainnet();

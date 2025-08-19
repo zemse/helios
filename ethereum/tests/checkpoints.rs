@@ -1,5 +1,5 @@
 use alloy::primitives::B256;
-use helios_ethereum::config::{checkpoints, networks};
+use zemse_helios_ethereum::config::{checkpoints, networks};
 
 #[tokio::test]
 async fn test_checkpoint_fallback() {

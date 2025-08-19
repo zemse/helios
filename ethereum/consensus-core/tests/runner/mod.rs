@@ -6,7 +6,7 @@ use serde_yaml::{Mapping, Value};
 use ssz::Decode;
 use tree_hash::TreeHash;
 
-use helios_consensus_core::{
+use zemse_helios_consensus_core::{
     apply_bootstrap, apply_generic_update,
     consensus_spec::MinimalConsensusSpec,
     force_update,
