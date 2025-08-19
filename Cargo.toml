@@ -95,10 +95,10 @@ typenum = "1.17.0"
 ######################################
 
 [dependencies]
-helios-common = { package = "zemse-helios-common", path = "./common" }
-helios-core = { package = "zemse-helios-core", path = "./core" }
-helios-ethereum = { package = "zemse-helios-ethereum", path = "./ethereum" }
-helios-opstack = { package = "zemse-helios-opstack", path = "./opstack" }
+helios-common = { package = "zemse-helios-common", path = "./common", version = "0.9.0" }
+helios-core = { package = "zemse-helios-core", path = "./core", version = "0.9.0" }
+helios-ethereum = { package = "zemse-helios-ethereum", path = "./ethereum", version = "0.9.0" }
+helios-opstack = { package = "zemse-helios-opstack", path = "./opstack", version = "0.9.0" }
 
 [dev-dependencies]
 tokio.workspace = true
@@ -108,7 +108,7 @@ serde.workspace = true
 serde_json.workspace = true
 hex.workspace = true
 dotenv = "0.15.0"
-helios-verifiable-api-server = { package = "zemse-helios-verifiable-api-server", path = "verifiable-api/server" }
+helios-verifiable-api-server = { package = "zemse-helios-verifiable-api-server", path = "verifiable-api/server", version = "0.9.0" }
 
 [target.'cfg(not(target_arch = "wasm32"))'.dev-dependencies]
 alloy = { version = "1.0.3", features = ["full"] }

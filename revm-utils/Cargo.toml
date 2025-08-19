@@ -14,5 +14,5 @@ tracing.workspace = true
 thiserror.workspace = true 
 
 # self crates
-helios-common = { package = "zemse-helios-common", path = "../common" }
-helios-core = { package = "zemse-helios-core", path = "../core" }
+helios-common = { package = "zemse-helios-common", path = "../common", version = "0.9.0" }
+helios-core = { package = "zemse-helios-core", path = "../core", version = "0.9.0" }

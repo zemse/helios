@@ -7,8 +7,8 @@ description = "Core functionality and types for the Helios project"
 
 [dependencies]
 # self crates
-helios-common = { package = "zemse-helios-common", path = "../common" }
-helios-verifiable-api-client = { package = "zemse-helios-verifiable-api-client", path = "../verifiable-api/client" }
+helios-common = { package = "zemse-helios-common", path = "../common", version = "0.9.0" }
+helios-verifiable-api-client = { package = "zemse-helios-verifiable-api-client", path = "../verifiable-api/client", version = "0.9.0" }
 
 # execution
 alloy = { workspace = true, features = ["rand"] }
@@ -46,5 +46,5 @@ getrandom = { version = "0.3.1", features = ["wasm_js"] }
 parking_lot = { version = "0.12.2" }
 
 [dev-dependencies]
-helios-test-utils = { package = "zemse-helios-test-utils", path = "../tests/test-utils" }
-helios-ethereum = { package = "zemse-helios-ethereum", path = "../ethereum" }
+helios-test-utils = { package = "zemse-helios-test-utils", path = "../tests/test-utils", version = "0.9.0" }
+helios-ethereum = { package = "zemse-helios-ethereum", path = "../ethereum", version = "0.9.0" }

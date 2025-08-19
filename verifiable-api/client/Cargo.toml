@@ -18,5 +18,5 @@ tokio.workspace = true
 url.workspace = true
 
 # self crates
-helios-verifiable-api-types = { package = "zemse-helios-verifiable-api-types", path = "../types" }
-helios-common = { package = "zemse-helios-common", path = "../../common" }
+helios-verifiable-api-types = { package = "zemse-helios-verifiable-api-types", path = "../types", version = "0.9.0" }
+helios-common = { package = "zemse-helios-common", path = "../../common", version = "0.9.0" }

@@ -9,7 +9,7 @@ serde.workspace = true
 serde_json.workspace = true
 
 # self crates
-helios-common = { package = "zemse-helios-common", path = "../../common" }
-helios-core = { package = "zemse-helios-core", path = "../../core" }
-helios-ethereum = { package = "zemse-helios-ethereum", path = "../../ethereum" }
-helios-verifiable-api-types = { package = "zemse-helios-verifiable-api-types", path = "../../verifiable-api/types" }
+helios-common = { package = "zemse-helios-common", path = "../../common", version = "0.9.0" }
+helios-core = { package = "zemse-helios-core", path = "../../core", version = "0.9.0" }
+helios-ethereum = { package = "zemse-helios-ethereum", path = "../../ethereum", version = "0.9.0" }
+helios-verifiable-api-types = { package = "zemse-helios-verifiable-api-types", path = "../../verifiable-api/types", version = "0.9.0" }

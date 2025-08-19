@@ -11,4 +11,4 @@ serde.workspace = true
 serde_json.workspace = true
 
 # self crates
-helios-common = { package = "zemse-helios-common", path = "../../common" }
+helios-common = { package = "zemse-helios-common", path = "../../common", version = "0.9.0" }
