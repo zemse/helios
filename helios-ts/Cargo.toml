@@ -1,5 +1,5 @@
 [package]
-name = "helios-ts"
+name = "zemse-helios-ts"
 version.workspace = true
 edition = "2021"
 
@@ -25,10 +25,10 @@ serde_json = "1.0.85"
 url = "2.5.0"
 
 # self crates
-helios-common = { path = "../common" }
-helios-ethereum = { path = "../ethereum" }
-helios-opstack = { path = "../opstack" }
-helios-linea = { path = "../linea" }
+helios-common = { package = "zemse-helios-common", path = "../common" }
+helios-ethereum = { package = "zemse-helios-ethereum", path = "../ethereum" }
+helios-opstack = { package = "zemse-helios-opstack", path = "../opstack" }
+helios-linea = { package = "zemse-helios-linea", path = "../linea" }
 
 [dependencies.web-sys]
 version = "0.3"

@@ -1,5 +1,5 @@
 [package]
-name = "helios-revm-utils"
+name = "zemse-helios-revm-utils"
 version.workspace = true
 edition = "2021"
 description = "Utilities for integrating REVM with Helios"
@@ -13,5 +13,5 @@ tracing.workspace = true
 thiserror.workspace = true 
 
 # self crates
-helios-common = { path = "../common" }
-helios-core = { path = "../core" }
+helios-common = { package = "zemse-helios-common", path = "../common" }
+helios-core = { package = "zemse-helios-core", path = "../core" }

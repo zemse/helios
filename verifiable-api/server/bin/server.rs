@@ -2,7 +2,7 @@ use clap::Parser;
 use tracing::level_filters::LevelFilter;
 use tracing_subscriber::{EnvFilter, FmtSubscriber};
 
-use helios_verifiable_api_server::server::{Network, VerifiableApiServer};
+use zemse_helios_verifiable_api_server::server::{Network, VerifiableApiServer};
 
 #[tokio::main(flavor = "multi_thread")]
 async fn main() {

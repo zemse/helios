@@ -1,5 +1,5 @@
 [package]
-name = "helios-consensus-core"
+name = "zemse-helios-consensus-core"
 version.workspace = true
 edition = "2021"
 

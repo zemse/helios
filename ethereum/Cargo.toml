@@ -1,5 +1,5 @@
 [package]
-name = "helios-ethereum"
+name = "zemse-helios-ethereum"
 version.workspace = true
 edition = "2021"
 
@@ -37,10 +37,10 @@ retri.workspace = true
 typenum.workspace = true
 
 # self crates
-helios-common = { path = "../common" }
-helios-core = { path = "../core" }
-helios-consensus-core = { path = "consensus-core" }
-helios-revm-utils = { path = "../revm-utils"  }
+helios-common = { package = "zemse-helios-common", path = "../common" }
+helios-core = { package = "zemse-helios-core", path = "../core" }
+helios-consensus-core = { package = "zemse-helios-consensus-core", path = "consensus-core" }
+helios-revm-utils = { package = "zemse-helios-revm-utils", path = "../revm-utils"  }
 
 [target.'cfg(target_arch = "wasm32")'.dependencies]
 wasm-bindgen-futures = "0.4.37"

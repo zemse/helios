@@ -1,5 +1,5 @@
 [package]
-name = "helios-common"
+name = "zemse-helios-common"
 version.workspace = true
 edition = "2021"
 

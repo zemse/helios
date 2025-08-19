@@ -1,5 +1,5 @@
 [package]
-name = "helios-verifiable-api-client"
+name = "zemse-helios-verifiable-api-client"
 version.workspace = true
 edition = "2021"
 
@@ -16,5 +16,5 @@ tokio.workspace = true
 url.workspace = true
 
 # self crates
-helios-verifiable-api-types = { path = "../types" }
-helios-common = { path = "../../common" }
+helios-verifiable-api-types = { package = "zemse-helios-verifiable-api-types", path = "../types" }
+helios-common = { package = "zemse-helios-common", path = "../../common" }
