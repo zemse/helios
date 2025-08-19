@@ -31,11 +31,11 @@ default-members = ["cli"]
 
 [workspace.dependencies]
 # consensus
-ssz_types = "0.11"
+ssz_types = { package = "zemse_ssz_types", version = "0.11" }
 ethereum_ssz_derive = "0.9"
 ethereum_ssz = "0.9"
 tree_hash_derive = "0.10.0"
-tree_hash = "0.10.0"
+tree_hash = { package = "zemse_tree_hash", version = "0.10.0" }
 sha2 = "0.9"
 bls12_381 = { version = "0.8.0", features = ["experimental"] }
 
@@ -123,14 +123,6 @@ hex = "0.4.3"
 pretty_assertions = "1.4.0"
 rand = "0.8.5"
 serial_test = "3.0"
-
-######################################
-# Dependency Patches
-######################################
-
-[patch.crates-io]
-# ethereum_hashing = { package = "zemse_ethereum_hashing", version = "0.7.0" }
-ethereum_hashing = { git = "https://github.com/ncitron/ethereum_hashing", rev = "7ee70944ed4fabe301551da8c447e4f4ae5e6c35" }
 
 ######################################
 # Profiles

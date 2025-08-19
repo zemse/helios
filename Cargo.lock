@@ -2934,9 +2934,11 @@ dependencies = [
 [[package]]
 name = "ethereum_hashing"
 version = "0.7.0"
-source = "git+https://github.com/ncitron/ethereum_hashing?rev=7ee70944ed4fabe301551da8c447e4f4ae5e6c35#7ee70944ed4fabe301551da8c447e4f4ae5e6c35"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c853bd72c9e5787f8aafc3df2907c2ed03cff3150c3acd94e2e53a98ab70a8ab"
 dependencies = [
  "cpufeatures",
+ "ring 0.17.14",
  "sha2 0.10.9",
 ]
 
@@ -7637,22 +7639,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "ssz_types"
-version = "0.11.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "75b55bedc9a18ed2860a46d6beb4f4082416ee1d60be0cc364cebdcdddc7afd4"
-dependencies = [
- "ethereum_serde_utils",
- "ethereum_ssz",
- "itertools 0.13.0",
- "serde",
- "serde_derive",
- "smallvec",
- "tree_hash",
- "typenum",
-]
-
-[[package]]
 name = "stability"
 version = "0.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -9401,16 +9387,16 @@ dependencies = [
  "serde_yaml",
  "sha2 0.9.9",
  "snap",
- "ssz_types",
  "superstruct",
  "thiserror 1.0.69",
  "tokio",
  "tracing",
- "tree_hash",
  "tree_hash_derive",
  "typenum",
  "wasmtimer 0.2.1",
  "zduny-wasm-timer",
+ "zemse_ssz_types",
+ "zemse_tree_hash",
 ]
 
 [[package]]
@@ -9471,7 +9457,6 @@ dependencies = [
  "thiserror 1.0.69",
  "tokio",
  "tracing",
- "tree_hash",
  "typenum",
  "url",
  "wasm-bindgen-futures",
@@ -9479,6 +9464,7 @@ dependencies = [
  "zemse-helios-consensus-core",
  "zemse-helios-core",
  "zemse-helios-revm-utils",
+ "zemse_tree_hash",
 ]
 
 [[package]]
@@ -9531,7 +9517,6 @@ dependencies = [
  "serde",
  "sha2 0.9.9",
  "snap",
- "ssz_types",
  "tokio",
  "tracing",
  "tracing-subscriber 0.3.19",
@@ -9544,6 +9529,7 @@ dependencies = [
  "zemse-helios-core",
  "zemse-helios-ethereum",
  "zemse-helios-revm-utils",
+ "zemse_ssz_types",
 ]
 
 [[package]]
@@ -9652,6 +9638,45 @@ dependencies = [
  "serde",
  "serde_json",
  "zemse-helios-common",
+]
+
+[[package]]
+name = "zemse_ethereum_hashing"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "282d7abf7b2873f07b54f4fdf23547d745a6b76d66056361cfd852ead44bc3b3"
+dependencies = [
+ "cpufeatures",
+ "sha2 0.10.9",
+]
+
+[[package]]
+name = "zemse_ssz_types"
+version = "0.11.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ba75c23eb8765740de6d2e7c8d37c7ba8c5ab17b8e942aee978f03110cd7349d"
+dependencies = [
+ "ethereum_serde_utils",
+ "ethereum_ssz",
+ "itertools 0.13.0",
+ "serde",
+ "serde_derive",
+ "smallvec",
+ "typenum",
+ "zemse_tree_hash",
+]
+
+[[package]]
+name = "zemse_tree_hash"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d8a79ae55991c76c6782529d1f989bbac552e5051436cb4d4691b101b02aa532"
+dependencies = [
+ "alloy-primitives",
+ "ethereum_ssz",
+ "smallvec",
+ "typenum",
+ "zemse_ethereum_hashing",
 ]
 
 [[package]]

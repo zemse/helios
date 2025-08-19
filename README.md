@@ -1,3 +1,18 @@
+As of this writing, original helios is not available on crates.io due to dependency issues.
+
+Notes for me to publish the helios-ethereum package.
+
+```
+cargo build
+cargo publish --package zemse-helios-common
+cargo publish --package zemse-helios-verifiable-api-types
+cargo publish --package zemse-helios-verifiable-api-client
+cargo publish --package zemse-helios-core
+cargo publish --package zemse-helios-revm-utils
+cargo publish --package zemse-helios-consensus-core
+cargo publish --package zemse-helios-ethereum
+```
+
 ## Helios
 
 [![build](https://github.com/a16z/helios/actions/workflows/test.yml/badge.svg)](https://github.com/a16z/helios/actions/workflows/test.yml) [![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT) [![chat](https://img.shields.io/badge/chat-telegram-blue)](https://t.me/+IntDY_gZJSRkNTJj)
@@ -19,6 +34,7 @@ curl https://raw.githubusercontent.com/a16z/helios/master/heliosup/install | bas
 To install Helios, run `heliosup`.
 
 ## Usage
+
 ### Ethereum
 
 To run Helios on Ethereum, run the command below, replacing `$ETH_RPC_URL` with an RPC provider URL such as Alchemy:
@@ -32,7 +48,6 @@ helios ethereum --execution-rpc $ETH_RPC_URL
 Helios will now run a local RPC server at `http://127.0.0.1:8545`.
 
 Helios also provides documentation of its supported RPC methods in the [rpc.md](./rpc.md) file.
-
 
 ### OP Stack
 
@@ -117,14 +132,16 @@ Examples of running Helios as a rust library can be seen in the [examples](./exa
 A checkpoint is a Beacon Chain Consensus Layer block hash rather than an Execution Layer block hash. An example of an Execution Layer block hash for Holesky is shown at https://holesky.etherscan.io/blocks
 
 Checkpoints may be obtained from the following links:
-* Ethereum Mainnet https://beaconcha.in
-* Holesky Testnet https://holesky.beaconcha.in
+
+- Ethereum Mainnet https://beaconcha.in
+- Holesky Testnet https://holesky.beaconcha.in
 
 It is recommended to use a block hash as a checkpoint that is less than two weeks old, however you can actually use older checkpoints and it will still work but will give you a warning. Using a checkpoint that is less than two weeks old prevents a few attacks that are pretty hard to pull off.
 
 For example, to obtain a recent checkpoint for Holesky Testnet go to https://holesky.beaconcha.in/ and get the block hash of the first block in any finalized epoch. At the time of writing, the [first block hash in epoch 78425](https://holesky.beaconcha.in/epoch/78425) is the [oldest slot 2509600](https://holesky.beaconcha.in/slot/2509600) that has a Block Root of 0x60409a013161b33c8c68c6183c7753e779ec6c24be2f3c50c6036c30e13b34a6 and is the latest checkpoint value to use.
 
 This latest checkpoint may be provided as an [Additional CLI Option](#additional-cli-options) at the command line to run a Helios Light Client node on Ethereum Holesky Testnet:
+
 ```bash
 helios ethereum \
     --network holesky \
@@ -136,6 +153,7 @@ helios ethereum \
 For example, to obtain a recent checkpoint for Ethereum Mainnet go to https://beaconcha.in and get the block hash of the first block in any finalized epoch. At the time of writing the [first block hash in epoch 222705](https://beaconcha.in/epoch/222705) is the [oldest slot 7126560](https://beaconcha.in/slot/7126560) that has a Block Root of 0xe1912ca8ca3b45dac497cae7825bab055b0f60285533721b046e8fefb5b076f2 and is the latest checkpoint value to use.
 
 This latest checkpoint may be provided as an [Additional CLI Option](#additional-cli-options) at the command line to run a Helios Light Client node on Ethereum Mainnet:
+
 ```bash
 helios ethereum \
     --network mainnet \
@@ -149,6 +167,7 @@ If you wish to use a [Configuration File](#configuration-files) instead of CLI a
 ## Testing
 
 To ensure that Helios works as expected, we have a comprehensive test suite that you can run. Before running the tests, make sure to create a `.env` file in the root of the project directory. You can copy the contents of the `.env.example` file and fill in your own secrets.
+
 ```sh
 cp .env.example .env
 ```
