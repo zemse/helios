@@ -4,6 +4,8 @@ version.workspace = true
 edition = "2021"
 autobenches = false
 exclude = ["benches"]
+license = "MIT" 
+repository = "https://github.com/zemse/helios"
 
 [workspace.package]
 version = "0.9.0"

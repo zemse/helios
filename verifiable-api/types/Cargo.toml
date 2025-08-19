@@ -2,6 +2,8 @@
 name = "zemse-helios-verifiable-api-types"
 version.workspace = true
 edition = "2021"
+license = "MIT"
+description = "Types used in the Helios Verifiable API, shared between client and server"
 
 [dependencies]
 alloy.workspace = true

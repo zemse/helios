@@ -2,6 +2,8 @@
 name = "zemse-helios-verifiable-api-client"
 version.workspace = true
 edition = "2021"
+license = "MIT"
+description = "Client for the Helios Verifiable API, providing utilities to interact with the API endpoints"
 
 [dependencies]
 alloy.workspace = true

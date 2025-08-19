@@ -2,6 +2,8 @@
 name = "zemse-helios-core"
 version.workspace = true
 edition = "2021"
+license = "MIT"
+description = "Core functionality and types for the Helios project"
 
 [dependencies]
 # self crates

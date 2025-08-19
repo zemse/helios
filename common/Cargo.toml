@@ -2,6 +2,8 @@
 name = "zemse-helios-common"
 version.workspace = true
 edition = "2021"
+license = "MIT"
+description = "Common utilities and types for the Helios project"
 
 [dependencies]
 alloy.workspace = true
