@@ -9425,8 +9425,6 @@ dependencies = [
  "wasm-bindgen-futures",
  "wasmtimer 0.2.1",
  "zemse-helios-common",
- "zemse-helios-ethereum",
- "zemse-helios-test-utils",
  "zemse-helios-verifiable-api-client",
 ]
 

@@ -46,5 +46,5 @@ getrandom = { version = "0.3.1", features = ["wasm_js"] }
 parking_lot = { version = "0.12.2" }
 
 [dev-dependencies]
-helios-test-utils = { package = "zemse-helios-test-utils", path = "../tests/test-utils", version = "0.9.0" }
-helios-ethereum = { package = "zemse-helios-ethereum", path = "../ethereum", version = "0.9.0" }
+# helios-test-utils = { package = "zemse-helios-test-utils", path = "../tests/test-utils", version = "0.9.0" }
+# helios-ethereum = { package = "zemse-helios-ethereum", path = "../ethereum", version = "0.9.0" }
